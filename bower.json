@@ -1,0 +1,21 @@
+{
+  "name": "Angular-Template",
+  "version": "0.0.0",
+  "authors": [
+    "Shivraj Rath <shivrajrath@gmail.com>"
+  ],
+  "description": "A boiler plate for angular applications",
+  "main": "index.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-bootstrap": "~0.12.1",
+    "bootstrap": "~3.3.2"
+  }
+}

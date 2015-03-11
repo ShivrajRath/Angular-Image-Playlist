@@ -1,0 +1,33 @@
+<!doctype html>
+<html class="no-js" ng-app="angularTemplate">
+
+<head>
+  <meta charset="utf-8">
+  <title>Angular Template</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="app/vendor.css"> -->
+
+</head>
+
+<body>
+  <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+  <div ng-include="'app/common/components/navbar/navbar.html'"></div>
+
+  <div ui-view></div>
+
+  <div class="footer">
+    <p>With ♥ from <a href="https://twitter.com/ShivrajRath">Bangalore, India</a>
+    </p>
+  </div>
+
+  <!--Browserify bundle. Should run gulp clean and browserify to generate the bundled.js-->
+  <script type="text/javascript" src="bundled.js"></script>
+</body>
+
+</html>
