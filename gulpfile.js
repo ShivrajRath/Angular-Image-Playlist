@@ -31,14 +31,14 @@
 
   // Tasks
   gulp.task('lint', function () {
-    gulp.src([paths.src + '/**/*.js', '!' + paths.src + '/bundled.js'])
+    gulp.src([paths.src + '/**/*.js', '!' + paths.src + '/bundled.js', '!' + paths.src + '/**/*spec.js'])
       .pipe(jshint())
       .pipe(jshint.reporter('default'))
       .pipe(jshint.reporter('fail'));
   });
 
   gulp.task('jscs', function () {
-    gulp.src([paths.src + '/**/*.js', '!' + paths.src + '/bundled.js'])
+    gulp.src([paths.src + '/**/*.js', '!' + paths.src + '/bundled.js', '!' + paths.src + '/**/*.spec.js'])
       .pipe(jscs());
   });
 

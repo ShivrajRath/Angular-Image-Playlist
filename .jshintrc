@@ -24,13 +24,15 @@
     "angular": true,
     // Angular Mocks
     "inject": false,
-    // JASMINE
+    // MOCHA
     "describe": false,
     "it": false,
     "before": false,
     "beforeEach": false,
     "after": false,
     "afterEach": false,
-    "expect": false
+    "expect": false,
+    // CHAI
+    "assert": false
   }
 }

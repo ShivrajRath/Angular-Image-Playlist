@@ -5,12 +5,12 @@
  * @author ShivrajRath
  */
 (function () {
-    'use strict';
+  'use strict';
 
-    var app = require('angular').module('angularTemplate');
-    app.constant('AppConstants', {
-        'URLS': {
-            'TEAM_MEMBERS_LIST': './configs/teammembers.config.json'
-        }
-    });
+  var app = require('angular').module('angularTemplate');
+  app.constant('AppConstants', {
+    'URLS': {
+      'TEAM_MEMBERS_LIST': './configs/teammembers.config.json'
+    }
+  });
 })();
