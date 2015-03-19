@@ -1,6 +1,6 @@
 /**
  * @namespace StateManagementCtrl
- * @memberof modules
+ * @memberof Controller
  * @author ShivrajRath
  * @description Controller for State Management module
  */

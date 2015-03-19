@@ -16,12 +16,7 @@
         templateUrl: './app/modules/main/main.html',
         controller: 'MainCtrl'
       })
-      // Team members Route
-      .state('teammembers', {
-        url: '/teammembers',
-        templateUrl: './app/modules/teammembers/teammembers.html',
-        controller: 'TeamMembersCtrl'
-      })
+
       // State management Route
       .state('statemanagement', {
         url: '/statemanagement',
