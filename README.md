@@ -12,4 +12,5 @@
 ### To Do
 * Decide Manual DI Annotating vs ngAnnotate
 * Error module for exception handling
-* Using lodash with browserify
+* Cleanup header in router
+* Create Widgets for: list, image grid, header

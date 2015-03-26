@@ -14,7 +14,7 @@
   app.controller('StateManagementCtrl', require('./statemanagement/statemanagement.controller'));
 
   // Image Module
-  app.controller('ImageCtrl', require('./image/image.controller'));
+  app.controller('AddImageCtrl', require('./image/add-image.controller'));
   app.factory('ImageModel', require('./image/image.model'));
   app.factory('ImageService', require('./image/image.service'));
 

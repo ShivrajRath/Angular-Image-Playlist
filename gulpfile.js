@@ -88,25 +88,25 @@
   gulp.task('browserSync', function () {
     browserSync({
       server: {
-        baseDir: "./src"
+        baseDir: './src'
       }
     });
   });
 
   // Gulp default task
-  gulp.task('default', ['clean', 'browserify', 'lint', 'less'], function () {
+  gulp.task('default', ['clean', 'browserify', 'jscs', 'lint', 'less'], function () {
 
     // Reload on file change
-    gulp.watch(paths.src + '/**/*.html', [browserSync.reload]);
-    gulp.watch(paths.src + '/less/**/*.less', [less, browserSync.reload]);
-    gulp.watch(paths.src + '/**/*.js', ['browserify', 'lint', browserSync.reload]);
+    gulp.watch(paths.src + '/**/*.html', [reload]);
+    gulp.watch(paths.src + '/less/**/*.less', [less, reload]);
+    gulp.watch(srcDev, ['browserify', 'lint', 'jscs', reload]);
 
     // BrowserSync after all tasks
     browserSync({
       server: {
-        baseDir: "./src"
+        baseDir: './src'
       }
-    })
+    });
 
   });
 

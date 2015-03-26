@@ -10,18 +10,15 @@
   var app = require('angular').module('angularTemplate');
   app.config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
-    // Home Route
-    //      .state('home', {
-    //        url: '/',
-    //        templateUrl: './app/modules/main/main.html',
-    //        controller: 'MainCtrl'
-    //      })
-
       .state('templateA', {
         abstract: true,
         templateUrl: './app/common/templates/two-col-50p.html'
       })
-      .state('templateA.home', {
+      .state('templateB', {
+        abstract: true,
+        templateUrl: './app/common/templates/two-col-75p-25p.html'
+      })
+      .state('templateB.home', {
         url: '/',
         views: {
           // Header needs to be cleaned up
@@ -38,6 +35,28 @@
           'col2': {
             'templateUrl': './app/modules/playlist/all-playlist.html',
             controller: 'AllPlaylistCtrl'
+          }
+        }
+      })
+      .state('templateA.addImage', {
+        url: '/addImage/:playlistId',
+        views: {
+          // Header needs to be cleaned up
+          'header': {
+            template: '<h1>{{title}}</h1>',
+            controller: function ($scope) {
+              $scope.title = 'Add Image';
+            }
+          },
+          'col1': {
+            'templateUrl': './app/modules/image/add-image.html',
+            controller: 'AddImageCtrl'
+          },
+          'col2': {
+            template: '<h1>{{title}}</h1>',
+            controller: function ($scope) {
+              $scope.title = 'Image Grid';
+            }
           }
         }
       })

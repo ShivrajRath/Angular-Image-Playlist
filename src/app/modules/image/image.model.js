@@ -9,5 +9,32 @@
 
   module.exports = function () {
 
+    var ImageModel = function (imageObj) {
+      if (imageObj) {
+        this.setData(imageObj);
+      }
+    };
+
+    ImageModel.prototype = {
+
+      setData: function (imageObj) {
+        this.name = imageObj.name;
+        this.url = imageObj.url;
+        this.pageurl = imageObj.url;
+        this.description = imageObj.description;
+        this.tags = imageObj.tags;
+        this.imageId = imageObj.imageId;
+      },
+
+      deleteImage: function () {
+
+      },
+
+      updateImage: function (imageObj) {
+        this.setData(imageObj);
+      }
+    };
+
+    return ImageModel;
   };
 })();
