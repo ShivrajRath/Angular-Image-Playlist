@@ -16,15 +16,23 @@
     };
 
     PlaylistModel.prototype = {
-      setData: function (playlistObj) {
 
+      setData: function (playlistObj) {
+        this.name = playlistObj.name;
+        this.description = playlistObj.description;
+        this.tags = playlistObj.tags;
+        this.playlistId = playlistObj.playlistId;
       },
+
       deletePlaylist: function () {
 
       },
-      updatePlaylist: function (playlistObj) {
 
+      updatePlaylist: function (playlistObj) {
+        this.setData(playlistObj);
       }
     };
+
+    return PlaylistModel;
   };
 })();

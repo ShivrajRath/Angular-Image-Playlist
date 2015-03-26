@@ -10,7 +10,7 @@
   module.exports = function ($scope, ImageService) {
 
     // imgId would be passed in the URL
-    $scope.image = ImageService.getImage(imgId);
+    $scope.image = ImageService.getImage();
   };
 
 })();

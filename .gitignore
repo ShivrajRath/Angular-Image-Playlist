@@ -2,3 +2,5 @@ node_modules/
 docs_out/
 bower_components/
 **/*.log/
+dist/
+.tmp/

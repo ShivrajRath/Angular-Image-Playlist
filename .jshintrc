@@ -21,6 +21,7 @@
   "validthis": true,
   "globals": {
     // With browserify
+    "_": true,
     "angular": true,
     // Angular Mocks
     "inject": false,

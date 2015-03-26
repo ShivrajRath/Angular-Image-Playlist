@@ -11,14 +11,46 @@
   app.config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
     // Home Route
-      .state('home', {
+    //      .state('home', {
+    //        url: '/',
+    //        templateUrl: './app/modules/main/main.html',
+    //        controller: 'MainCtrl'
+    //      })
+
+      .state('templateA', {
+        abstract: true,
+        templateUrl: './app/common/templates/two-col-50p.html'
+      })
+      .state('templateA.home', {
         url: '/',
-        templateUrl: './app/modules/main/main.html',
-        controller: 'MainCtrl'
+        views: {
+          // Header needs to be cleaned up
+          'header': {
+            template: '<h1>{{title}}</h1>',
+            controller: function ($scope) {
+              $scope.title = 'Home';
+            }
+          },
+          'col1': {
+            'templateUrl': './app/modules/playlist/create-playlist.html',
+            controller: 'CreatePlaylistCtrl'
+          },
+          'col2': {
+            'templateUrl': './app/modules/playlist/all-playlist.html',
+            controller: 'AllPlaylistCtrl'
+          }
+        }
       })
 
-      // State management Route
-      .state('statemanagement', {
+    // Create Playlist Route
+    .state('create-playlist', {
+      url: '/create-playlist',
+      templateUrl: './app/modules/playlist/create-playlist.html',
+      controller: 'CreatePlaylistCtrl'
+    })
+
+    // State management Route
+    .state('statemanagement', {
         url: '/statemanagement',
         templateUrl: './app/modules/statemanagement/statemanagement.html',
         controller: 'StateManagementCtrl'

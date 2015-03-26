@@ -1,0 +1,21 @@
+<!--Header-->
+<div ng-include="'./app/common/components/navbar/navbar.html'">
+</div>
+
+<!--Template Body-->
+<div class="container">
+  <div class="text-center mt30 mb30">
+    <div ui-view="header"></div>
+  </div>
+  <div>
+    <div class="col-xs-6">
+      <div ui-view="col1"></div>
+    </div>
+    <div class="col-xs-6">
+      <div ui-view="col2"></div>
+    </div>
+  </div>
+</div>
+
+<!--Footer-->
+<div ng-include="'./app/common/components/footer/footer.html'"></div>

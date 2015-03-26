@@ -1,0 +1,15 @@
+<form novalidate>
+  <div class="form-group">
+    <label for="playlistName">Name</label>
+    <input type="text" class="form-control" name="playlistName" id="playlistName" ng-model="playlist.name"  placeholder="Playlist Name">
+  </div>
+  <div class="form-group">
+    <label for="playlistDescription">Description</label>
+    <textarea class="form-control" rows="3" name="playlistDescription" id="playlistDescription" ng-model="playlist.description"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="playlistTags">Tags</label>
+    <input type="text" class="form-control" rows="3" name="playlistTags" id="playlistTags" ng-model="playlist.tags" placeholder="Tags separated by comma"></input>
+  </div>
+  <button type="submit" class="btn btn-default" ng-click="createPlaylist()">Submit</button>
+</form>

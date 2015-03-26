@@ -12,3 +12,4 @@
 ### To Do
 * Decide Manual DI Annotating vs ngAnnotate
 * Error module for exception handling
+* Using lodash with browserify

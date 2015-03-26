@@ -19,7 +19,9 @@
   app.factory('ImageService', require('./image/image.service'));
 
   // Playlist Module
-  app.controller('PlaylistCtrl', require('./playlist/playlist.controller'));
+  app.controller('EditPlaylistCtrl', require('./playlist/edit-playlist.controller'));
+  app.controller('CreatePlaylistCtrl', require('./playlist/create-playlist.controller'));
+  app.controller('AllPlaylistCtrl', require('./playlist/all-playlist.controller'));
   app.factory('PlaylistModel', require('./playlist/playlist.model'));
   app.factory('PlaylistService', require('./playlist/playlist.service'));
 

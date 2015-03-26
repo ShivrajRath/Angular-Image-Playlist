@@ -8,5 +8,6 @@ var app = require('angular').module('angularTemplate');
 /**
  * Utility inclusion for browserify indexing
  */
+app.factory('UtilityFactory', require('./utility.factory'));
 app.factory('CommonServiceFactory', require('./commonservice.factory'));
 app.factory('LoggerFactory', require('./logger.factory'));

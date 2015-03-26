@@ -8,22 +8,6 @@
   'use strict';
 
   module.exports = function () {
-    var ImageModel = function (imgObj) {
-      if (imgObj) {
-        this.setData(imgObj);
-      }
-    };
 
-    ImageModel.prototype = {
-      setData: function (imgData) {
-        angular.extend(this, imgData);
-      },
-      deleteImage: function (imgId) {
-
-      },
-      updateImage: function (imgId, imageObj) {
-
-      }
-    };
   };
 })();
