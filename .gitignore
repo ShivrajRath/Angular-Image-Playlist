@@ -1,5 +1,5 @@
 node_modules/
-docs_out/
+docs-out/
 bower_components/
 **/*.log/
 dist/
