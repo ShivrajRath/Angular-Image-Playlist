@@ -10,7 +10,6 @@
   /**
    * Module Injection via Browserify
    */
-  app.controller('MainCtrl', require('./main/main.controller'));
   app.controller('StateManagementCtrl', require('./statemanagement/statemanagement.controller'));
 
   // Image Module
