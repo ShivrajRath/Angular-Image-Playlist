@@ -1,1 +1,15 @@
-<h1>{{playlistId}}</h1>
+<form novalidate>
+  <div class="form-group">
+    <label for="imageName">Image Name</label>
+    <input type="text" class="form-control" name="imageName" id="imageName" ng-model="image.name" placeholder="Image Name">
+  </div>
+  <div class="form-group">
+    <label for="imageURL">Image URL</label>
+    <textarea class="form-control" rows="3" name="imageURL" id="imageURL" ng-model="image.url"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="imageTags">Tags</label>
+    <input type="text" class="form-control" rows="3" name="imageTags" id="imageTags" ng-model="image.tags" placeholder="Tags separated by comma"></input>
+  </div>
+  <button type="submit" class="btn btn-default" ng-click="addImage()">Submit</button>
+</form>

@@ -8,7 +8,7 @@
   'use strict';
 
   module.exports = function ($scope, PlaylistService) {
-    $scope.playlists = PlaylistService.readAllPlaylists();
+    $scope.playlists = PlaylistService.getAllPlaylists();
   };
 
 })();

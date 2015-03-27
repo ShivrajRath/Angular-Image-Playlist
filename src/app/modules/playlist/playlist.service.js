@@ -74,9 +74,13 @@ var  _ = require('lodash');
        * @param   {[[string]]} playlistId
        * @returns {[[Object]]} [[Playlist Object]]
        */
-      readPlaylist: function (playlistId) {
+      getPlaylist: function (playlistId) {
         if (playlistId) {
-          return this._playlist(playlistId);
+          var playlist = this._playlist[playlistId];
+          if(!playlist){
+            throw new Error('playlist not found');
+          }
+          return playlist;
         } else {
           throw new Error('playlistid not found');
         }
@@ -86,7 +90,7 @@ var  _ = require('lodash');
        * Returns the playlist queue
        * @returns {[[Object]]} [[All Playlists]]
        */
-      readAllPlaylists: function () {
+      getAllPlaylists: function () {
         return this._playlist;
       }
 

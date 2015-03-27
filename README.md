@@ -4,6 +4,7 @@
     * Can have maximum 100 images
 
 ### Running the app
+* gulp - starts browserConnect server
 
 ### Running the test suite
 * Install Karma Cli: ``npm install -g karma-cli``
@@ -14,3 +15,8 @@
 * Error module for exception handling
 * Cleanup header in router
 * Create Widgets for: list, image grid, header
+* Delete image and playlist
+* Check on comments
+* Localstorage connect to Playlist, Image
+* Remove the hard coded string
+* Add a error notification modal

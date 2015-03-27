@@ -19,76 +19,66 @@ var _ = require('lodash');
        * Adds a image object to imagelist queue
        * @param {Object} imagelist
        */
-      _addToimagelistQueue: function (imagelist) {
-        if (imagelist && imagelist.imagelistId) {
-          this._imagelist[imagelist.imagelistId] = imagelist;
+      _addToImagelistQueue: function (image) {
+        if (image && image.imageId) {
+          this._imagelist[image.imageId] = image;
         } else {
-          throw new Error('imagelistObj is not correct. Does not contain a imagelistId');
+          throw new Error('imgObj is not correct. Does not contain a imageId');
         }
       },
 
       /**
-       * Retrieves a imagelist object, if not present creates it
-       * @param {Object} imagelistObj
+       * Retrieves an image object, if not present creates it
+       * @param {Object} imgObj
        */
-      _retrieveImagelistInstance: function (imagelistObj) {
-        var imagelist;
+      _retrieveImageInstance: function (imgObj) {
+        var image;
 
-        if (imagelistObj.imagelistId) {
-          imagelist = new ImageModel(imagelistObj);
-          this._addToImagelistQueue(imagelist);
-        } else if (imagelistObj && imagelistObj.name) {
-          this._generateImagelistId(imagelistObj);
-          imagelist = new ImageModel(imagelistObj);
-          this._addToImagelistQueue(imagelist);
+        if (imgObj.imageId) {
+          image = new ImageModel(imgObj);
+          this._addToImagelistQueue(image);
+        } else if (imgObj && imgObj.name) {
+          this._generateImageId(imgObj);
+          image = new ImageModel(imgObj);
+          this._addToImagelistQueue(image);
         } else {
-          throw new Error('imagelistObj is not correct');
+          throw new Error('imgObj is not correct');
         }
 
-        return imagelist;
+        return image;
 
       },
 
-
       /**
-       * Generates imagelistId for a imagelist object
+       * Generates imageId for a imagelist object
        */
-      _generateImagelistId: function (imagelistObj) {
-        imagelistObj.imagelistId = UtilityFactory.randomString(4) + '_Imagelist_' + new Date().getTime();
+      _generateImageId: function (imgObj) {
+        imgObj.imageId = UtilityFactory.randomString(4) + '_Imagelist_' + new Date().getTime();
       },
 
       /************************** Public Methods **************************/
 
       /**
-       * Creates a new imagelist
-       * @param   {[[Object]]} imagelistObj [[Description]]
-       * @returns {[[Object]]} [[Description]]
+       * Creates a new image
+       * @param   {[[Object]]} imgObj Raw image object
+       * @returns {[[Object]]} Image Instance
        */
-      createImagelist: function (imagelistObj) {
-        return this._retrieveImagelistInstance(_.cloneDeep(imagelistObj));
+      addImage: function (imgObj) {
+        return this._retrieveImageInstance(_.cloneDeep(imgObj));
       },
 
       /**
-       * Returns a imagelist
-       * @param   {[[string]]} imagelistId
-       * @returns {[[Object]]} [[Imagelist Object]]
+       * Returns an Image Instance
+       * @param   {[[string]]} imageId
+       * @returns {[[Object]]} [[Image Object]]
        */
-      readImagelist: function (imagelistId) {
-        if (imagelistId) {
-          return this._imagelist(imagelistId);
+      getImage: function (imageId) {
+        if (imageId) {
+          return this._imagelist[imageId];
         } else {
-          throw new Error('imagelistId not found');
+          throw new Error('imageId not found');
         }
-      },
-
-      /**
-       * Returns the imagelist queue
-       * @returns {[[Object]]} [[All Imagelists]]
-       */
-      readAllImagelists: function () {
-        return this._imagelist;
       }
-
     };
     return ImageService;
   };

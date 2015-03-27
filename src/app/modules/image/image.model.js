@@ -20,8 +20,6 @@
       setData: function (imageObj) {
         this.name = imageObj.name;
         this.url = imageObj.url;
-        this.pageurl = imageObj.url;
-        this.description = imageObj.description;
         this.tags = imageObj.tags;
         this.imageId = imageObj.imageId;
       },

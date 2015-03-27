@@ -28,6 +28,12 @@
 
       },
 
+      addImage: function (imageId) {
+        if (imageId) {
+          this.imageList.push(imageId);
+        }
+      },
+
       updatePlaylist: function (playlistObj) {
         this.setData(playlistObj);
       }
