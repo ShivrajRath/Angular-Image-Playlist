@@ -22,6 +22,8 @@
         this.description = playlistObj.description;
         this.tags = playlistObj.tags;
         this.playlistId = playlistObj.playlistId;
+        // Contains all the imageIds
+        this.imageList = [];
       },
 
       deletePlaylist: function () {

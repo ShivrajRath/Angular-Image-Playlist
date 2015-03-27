@@ -97,9 +97,7 @@
   gulp.task('default', ['clean', 'browserify', 'jscs', 'lint', 'less'], function () {
 
     // Reload on file change
-    gulp.watch(paths.src + '/**/*.html', [reload]);
-    gulp.watch(paths.src + '/less/**/*.less', [less, reload]);
-    gulp.watch(srcDev, ['browserify', 'lint', 'jscs', reload]);
+    gulp.watch([paths.src + '/**/*.html', paths.src + '/less/**/*.less', srcDev], ['less', 'browserify', 'lint', 'jscs', reload]);
 
     // BrowserSync after all tasks
     browserSync({

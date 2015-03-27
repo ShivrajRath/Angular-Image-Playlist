@@ -1,3 +1,4 @@
+<p><h3>You are adding image to playlist no: <a ng-href="/playlist/{{playlistId}}">{{playlistId}}</a></h3></p>
 <form novalidate>
   <div class="form-group">
     <label for="imageName">Image Name</label>
@@ -5,11 +6,11 @@
   </div>
   <div class="form-group">
     <label for="imageURL">Image URL</label>
-    <textarea class="form-control" rows="3" name="imageURL" id="imageURL" ng-model="image.url"></textarea>
+    <input type="text" class="form-control" name="imageURL" id="imageURL" ng-model="image.url" placeholder="Image URL"></input>
   </div>
   <div class="form-group">
     <label for="imageTags">Tags</label>
-    <input type="text" class="form-control" rows="3" name="imageTags" id="imageTags" ng-model="image.tags" placeholder="Tags separated by comma"></input>
+    <input type="text" class="form-control" name="imageTags" id="imageTags" ng-model="image.tags" placeholder="Tags separated by comma"></input>
   </div>
   <button type="submit" class="btn btn-default" ng-click="addImage()">Submit</button>
 </form>
