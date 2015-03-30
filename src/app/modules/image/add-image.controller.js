@@ -7,7 +7,7 @@
 (function () {
   'use strict';
 
-  module.exports = function ($scope, $stateParams, PlaylistService, ImageService) {
+  module.exports = function ($scope, $stateParams, PlaylistService, ImageService, $rootScope) {
 
     $scope.playlistId = $stateParams.playlistId;
     $scope.image = {};
@@ -19,8 +19,10 @@
         var playlist = PlaylistService.getPlaylist(this.playlistId);
 
         if (playlist) {
-          playlist.addImage(image.imageId);
-
+          if(playlist.addImage(image.imageId)){
+            $rootScope.$broadcast('image-added', image);
+          }
+        
           //Clear the fields
           $scope.image = {};
         }

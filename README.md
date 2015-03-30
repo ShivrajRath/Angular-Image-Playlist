@@ -20,3 +20,4 @@
 * Localstorage connect to Playlist, Image
 * Remove the hard coded string
 * Add a error notification modal
+* Why routing is not working? 

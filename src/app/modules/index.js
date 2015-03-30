@@ -10,10 +10,12 @@
   /**
    * Module Injection via Browserify
    */
+  app.controller('MainCtrl', require('./main/main.controller'));
   app.controller('StateManagementCtrl', require('./statemanagement/statemanagement.controller'));
 
   // Image Module
   app.controller('AddImageCtrl', require('./image/add-image.controller'));
+  app.controller('AllImageCtrl', require('./image/all-image.controller'));
   app.factory('ImageModel', require('./image/image.model'));
   app.factory('ImageService', require('./image/image.service'));
 

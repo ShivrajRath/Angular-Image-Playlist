@@ -53,10 +53,8 @@
             controller: 'AddImageCtrl'
           },
           'col2': {
-            template: '<h1>{{title}}</h1>',
-            controller: function ($scope) {
-              $scope.title = 'Image Grid';
-            }
+            'templateUrl': './app/modules/image/all-image.html',
+            controller: 'AllImageCtrl'
           }
         }
       })
