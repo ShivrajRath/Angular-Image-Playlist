@@ -14,6 +14,7 @@
 
   // Image Module
   app.controller('AddImageCtrl', require('./image/add-image.controller'));
+  app.controller('AllImageCtrl', require('./image/all-image.controller'));
   app.factory('ImageModel', require('./image/image.model'));
   app.factory('ImageService', require('./image/image.service'));
 

@@ -33,11 +33,18 @@
       addImage: function (imageId) {
         if (imageId) {
           this.imageList.push(imageId);
+          return true;
+        } else {
+          return false;
         }
       },
 
       updatePlaylist: function (playlistObj) {
         this.setData(playlistObj);
+      },
+
+      getAllImages: function () {
+        return this.imageList;
       }
     };
 
