@@ -1,6 +1,7 @@
 {
-  'app_name': 'Angular Image Playlist',
+  'app_name': 'Angular Template',
   'app_version': '',
   'last_updated': '',
-  'environment': 'stub'
+  'environment': 'stub',
+  'log_level': '',
 }
